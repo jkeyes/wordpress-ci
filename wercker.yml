@@ -1,1 +1,8 @@
 box: wercker/default
+build:
+  steps:
+    -  script:
+        name: Let's check the environment
+        code: |-
+          which php
+          sudo ls -l /etc/init.d
