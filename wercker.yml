@@ -4,7 +4,8 @@ build:
     -  script:
         name: Let's check the environment
         code: |-
-          apt-cache search php5
-          sudo apt-get install php5
-          which php
-          sudo ls -l /etc/init.d
+          cat /etc/*-release
+#          apt-cache search php5
+#          sudo apt-get install php5
+#          which php
+#          sudo ls -l /etc/init.d
