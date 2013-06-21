@@ -6,7 +6,7 @@ build:
         code: |-
           cat /etc/*-release
           cat /etc/apt/sources.list
-          echo "deb http://us.archive.ubuntu.com/ubuntu/ precise-backports main restricted universe multiverse" >> /etc/apt/sources.list
+          sudo echo "deb http://us.archive.ubuntu.com/ubuntu/ precise-backports main restricted universe multiverse" >> /etc/apt/sources.list
           sudo apt-get update
           apt-cache search php5
 #          which php
