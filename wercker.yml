@@ -6,7 +6,8 @@ build:
         code: |-
           cat /etc/*-release
           cat /etc/apt/sources.list
+          dpkg --get-selections
+          which php
 #          apt-cache search php5
 #          sudo apt-get install php5
-#          which php
 #          sudo ls -l /etc/init.d
