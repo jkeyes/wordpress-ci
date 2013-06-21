@@ -1,0 +1,4 @@
+wordpress-ci
+============
+
+WordPress CI
