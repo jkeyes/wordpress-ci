@@ -4,5 +4,6 @@ build:
     -  script:
         name: Let's check the environment
         code: |-
+          sudo apt-get install php5
           which php
           sudo ls -l /etc/init.d
