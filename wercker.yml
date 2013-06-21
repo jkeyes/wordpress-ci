@@ -5,6 +5,7 @@ build:
         name: Let's check the environment
         code: |-
           cat /etc/*-release
+          cat /etc/apt/sources.list
 #          apt-cache search php5
 #          sudo apt-get install php5
 #          which php
