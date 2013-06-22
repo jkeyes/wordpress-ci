@@ -4,6 +4,9 @@ build:
     -  script:
         name: Let's check the environment
         code: |-
+          cat /etc/*-release
+          cat /etc/apt/sources.list
+          uname -a | true
           sudo add-apt-repository -y ppa:ondrej/php5
           sudo apt-get update
           wget http://localhost | true
