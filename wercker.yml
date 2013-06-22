@@ -8,6 +8,11 @@ build:
           sudo apt-get update
           sudo apt-get install php5
           php5 -v
+          wget http://localhost
+          which php
+
+          # wget http://wordpress.org/latest.tar.gz
+
 
 #          cat /etc/*-release
 #          cat /etc/apt/sources.list
