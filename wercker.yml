@@ -10,13 +10,16 @@ build:
           sudo add-apt-repository -y ppa:ondrej/php5
           sudo apt-get update
           wget http://localhost | true
-          sudo apt-get install apache2
-          sudo ls -al /etc/init.d | true
-          sudo /etc/init.d/apache2 restart | true
+          sudo apt-get install libapache2-mod-php5
+          sudo a2enmod php5
+          sudo service apache2 restart
           wget http://localhost | true
           sudo apt-get install -f php5
           php5 -v
           which php
+
+#          sudo apt-get install apache2
+#          sudo /etc/init.d/apache2 restart | true
 
           # wget http://wordpress.org/latest.tar.gz
 
