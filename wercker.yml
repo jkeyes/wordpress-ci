@@ -6,6 +6,7 @@ build:
         code: |-
           sudo add-apt-repository -y ppa:ondrej/php5
           wget http://localhost | true
+          ls -al /etc/init.d | true
           /etc/init.d/apache2 restart | true
           sudo apt-get update
           sudo apt-get install -f php5
