@@ -4,6 +4,8 @@ build:
     -  script:
         name: Let's check the environment
         code: |-
+          which php | true
+          which php5 | true
           cat /etc/*-release
           cat /etc/apt/sources.list
           uname -a | true
@@ -14,12 +16,13 @@ build:
           sudo a2enmod php5
           sudo service apache2 restart
           wget http://localhost | true
-          sudo apt-get install -f php5
-          php5 -v
-          which php
+          which php | true
+          which php5 | true
 
 #          sudo apt-get install apache2
 #          sudo /etc/init.d/apache2 restart | true
+#          sudo apt-get install -f php5
+#          php5 -v
 
           # wget http://wordpress.org/latest.tar.gz
 
