@@ -4,7 +4,8 @@ build:
     -  script:
         name: Let's check the environment
         code: |-
-          which php
+          echo $PATH | true
+          /usr/bin/php -v
           which php5 | true
           cat /etc/*-release
           cat /etc/apt/sources.list
