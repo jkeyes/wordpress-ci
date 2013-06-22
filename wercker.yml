@@ -9,7 +9,6 @@ build:
           cat /etc/*-release
           cat /etc/apt/sources.list
           uname -a | true
-          sudo add-apt-repository -y ppa:ondrej/php5
           sudo apt-get update
           wget http://localhost | true
           sudo apt-get install php5 | true
@@ -20,6 +19,7 @@ build:
           which php | true
           which php5 | true
 
+#          sudo add-apt-repository -y ppa:ondrej/php5
 #          sudo apt-get install apache2
 #          sudo /etc/init.d/apache2 restart | true
 #          sudo apt-get install -f php5
