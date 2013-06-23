@@ -17,33 +17,6 @@ build:
           /usr/bin/php -v
           ./configure_wordpress.sh
           sudo rm /var/www/index.html
-          sudo mv sample.php /var/www/sample.php
-          wget http://localhost/sample.php -O sample.html | true
-          cat sample.html
           wget http://localhost -O index.html | true
           cat index.html
-          sudo ls -la /var/log/apache2
-          sudo cat  /var/log/apache2/error.log
-          set
-          echo $WERCKER_MYSQL_USERNAME
-          echo $WERCKER_MYSQL_PASSWORD
-          echo $WERCKER_MYSQL_PORT
-          echo $WERCKER_MYSQL_DATABASE
-#          sudo add-apt-repository -y ppa:ondrej/php5
-#          sudo apt-get install apache2
-#          sudo /etc/init.d/apache2 restart | true
-#          sudo apt-get install -f php5
-#          php5 -v
-
-          # wget http://wordpress.org/latest.tar.gz
-
-
-#          cat /etc/*-release
-#          cat /etc/apt/sources.list
-#          sudo echo "deb http://us.archive.ubuntu.com/ubuntu/ precise-backports main restricted universe multiverse" >> /etc/apt/sources.list
-#          sudo apt-get update
-#          apt-cache search php5
-
-#          which php
-#          sudo apt-get install php5
-#          sudo ls -l /etc/init.d
+          curl http://localhost
