@@ -11,15 +11,11 @@ build:
           sudo apt-get install libapache2-mod-php5
           sudo a2enmod php5
           sudo service apache2 restart
-          wget http://localhost | true
-          cat index.html
-          sudo ls -al /var/www
-          /usr/bin/php -v
-          ./configure_wordpress.sh
-          sudo ls -al /var/www
+          tar zxf wordpress-3.5.2.tar.gz
+          sudo mv wordpress/* /var/www/
+          sed -e "s/{{DB_NAME}}/$WERCKER_MYSQL_DATABASE/" -e "s/{{DB_USER}}/$WERCKER_MYSQL_USERNAME/" -e "s/{{DB_PASSWORD}}/$WERCKER_MYSQL_PASSWORD/" -e "s/{{DB_HOST}}/$WERCKER_MYSQL_HOST:$WERCKER_MYSQL_PORT/" < wp-config.template > wp-config.php
+          sudo mv wp-config.php $SITE_ROOT/wp-config.php
           sudo rm /var/www/index.html
+          curl -X POST --data "weblog_title=test&user_name=admin&admin_password=admin&admin_password2=admin&admin_email=admin@example.com" -i http://localhost/wp-admin/install.php?step=2
           wget http://localhost -O index.html
           cat index.html
-          curl -X POST --data "weblog_title=test&user_name=admin&admin_password=admin&admin_password2=admin&admin_email=admin@example.com" -i http://localhost/wp-admin/install.php?step=2
-          wget http://localhost -O index2.html
-          cat index2.html
