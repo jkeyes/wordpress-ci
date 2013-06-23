@@ -7,7 +7,7 @@ build:
         name: Let's check the environment
         code: |-
           sudo apt-get update
-          sudo apt-get install php5
+          sudo apt-get install php5 php5-mysql
           sudo apt-get install libapache2-mod-php5
           sudo a2enmod php5
           sudo service apache2 restart
