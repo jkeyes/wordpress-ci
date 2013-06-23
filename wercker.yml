@@ -14,7 +14,7 @@ build:
           tar zxf wordpress-3.5.2.tar.gz
           sudo mv wordpress/* /var/www/
           sed -e "s/{{DB_NAME}}/$WERCKER_MYSQL_DATABASE/" -e "s/{{DB_USER}}/$WERCKER_MYSQL_USERNAME/" -e "s/{{DB_PASSWORD}}/$WERCKER_MYSQL_PASSWORD/" -e "s/{{DB_HOST}}/$WERCKER_MYSQL_HOST:$WERCKER_MYSQL_PORT/" < wp-config.template > wp-config.php
-          sudo mv wp-config.php $SITE_ROOT/wp-config.php
+          sudo mv wp-config.php /var/www/wp-config.php
           sudo rm /var/www/index.html
           curl -X POST --data "weblog_title=test&user_name=admin&admin_password=admin&admin_password2=admin&admin_email=admin@example.com" -i http://localhost/wp-admin/install.php?step=2
           wget http://localhost -O index.html
