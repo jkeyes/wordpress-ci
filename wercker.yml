@@ -17,6 +17,8 @@ build:
           /usr/bin/php -v
           ./configure_wordpress.sh
           sudo rm /var/www/index.html
-          wget http://localhost -O index.html | true
+          wget http://localhost -O index.html
           cat index.html
-          curl http://localhost
+          curl --data "weblog_title=test&user_name=admin&admin_password=admin&admin_password2=admin&admin_email=admin@example.com" -i http://localhost/install.php
+          wget http://localhost -O index2.html
+          cat index2.html
