@@ -18,6 +18,8 @@ build:
           ./configure_wordpress.sh
           sudo rm /var/www/index.html
           sudo mv sample.php /var/www/sample.php
+          wget http://localhost/sample.php -O sample.html | true
+          cat sample.html
           wget http://localhost -O index.html | true
           cat index.html
           sudo ls -la /var/log/apache2
