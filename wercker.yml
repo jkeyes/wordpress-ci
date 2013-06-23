@@ -17,6 +17,4 @@ build:
           sudo mv wp-config.php /var/www/wp-config.php
           sudo rm /var/www/index.html
           curl -X POST --data "weblog_title=test&user_name=admin&admin_password=admin&admin_password2=admin&admin_email=admin@example.com" -i http://localhost/wp-admin/install.php?step=2
-          wget http://localhost -O index.html
-          curl http://localhost
-          cat index.html
+          curl http://localhost | grep "Welcome to WordPress. This is your first post."
