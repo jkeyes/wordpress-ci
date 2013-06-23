@@ -16,6 +16,7 @@ build:
           sudo ls -al /var/www
           /usr/bin/php -v
           ./configure_wordpress.sh
+          sudo ls -al /var/www
           sudo rm /var/www/index.html
           wget http://localhost -O index.html
           cat index.html
