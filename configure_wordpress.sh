@@ -5,7 +5,7 @@ SITE_ROOT="/var/www/"
 
 # extract the WordPress archive
 tar zxf wordpress-3.5.2.tar.gz
-mv wordpress $DB_NAME
+mv wordpress/* $SITE_ROOT
 
 # create the database
 mysql -u $WERCKER_MYSQL_USERNAME --password=$WERCKER_MYSQL_PASSWORD \
