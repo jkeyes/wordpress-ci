@@ -17,7 +17,7 @@ build:
           /usr/bin/php -v
           ./configure_wordpress.sh
           sudo rm /var/www/index.html
-          wget http://localhost | true
+          wget http://localhost -O index.html | true
           cat index.html
           ls -la /var/www
 #          sudo add-apt-repository -y ppa:ondrej/php5
