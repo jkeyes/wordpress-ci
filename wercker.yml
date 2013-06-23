@@ -25,7 +25,10 @@ build:
           sudo ls -la /var/log/apache2
           sudo cat  /var/log/apache2/error.log
           set
-          mysql -u $WERCKER_MYSQL_USERNAME --password=$WERCKER_MYSQL_PASSWORD --port $WERCKER_MYSQL_PORT -e "SHOW TABLES" $WERCKER_MYSQL_DATABASE;
+          echo $WERCKER_MYSQL_USERNAME
+          echo $WERCKER_MYSQL_PASSWORD
+          echo $WERCKER_MYSQL_PORT
+          echo $WERCKER_MYSQL_DATABASE
 #          sudo add-apt-repository -y ppa:ondrej/php5
 #          sudo apt-get install apache2
 #          sudo /etc/init.d/apache2 restart | true
